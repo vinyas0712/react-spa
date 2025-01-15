@@ -40,5 +40,11 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script defer src='https://portalstage.catchpoint.com/jp/93435/v4.0.7/InitialLoadScript.js'></script>
+    <script language="javascript" type="text/javascript">
+      function init() {
+        window.RProfiler.excludeBenchMarks();
+      }
+      window.RProfiler ? init() : window.addEventListener("GlimpseLoaded", init);
+    </script>
   </body>
 </html>
